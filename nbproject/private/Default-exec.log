@@ -1,0 +1,36 @@
+called: g++
+	/home/camata/workspace/bedrockmesher
+	g++
+	-g
+	-I./include
+	-I/usr/include/glib-2.0
+	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include/
+	-c
+	src/gmsh.cpp
+	-o
+	src/gmsh.dbg.o
+
+called: g++
+	/home/camata/workspace/bedrockmesher
+	g++
+	-g
+	-I./include
+	-I/usr/include/glib-2.0
+	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include/
+	-c
+	src/main.cpp
+	-o
+	src/main.dbg.o
+
+called: g++
+	/home/camata/workspace/bedrockmesher
+	g++
+	-g
+	-I./include
+	-I/usr/include/glib-2.0
+	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include/
+	-c
+	src/unv_io.cpp
+	-o
+	src/unv_io.dbg.o
+

@@ -1,0 +1,18 @@
+Compiling C++ (in dbg mode) src/gmsh.cpp...
+g++ -g -I./include   -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include/ -c src/gmsh.cpp -o src/gmsh.dbg.o
+src/gmsh.cpp: In member function ‘void Gmsh::save(const char*)’:
+src/gmsh.cpp:848:53: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘std::vector<GmshPhysicalParameter>::size_type {aka long unsigned int}’ [-Wformat=]
+     fprintf(fout, "%d\n", this->PhysicalNames.size());
+                                                     ^
+Compiling C++ (in dbg mode) src/main.cpp...
+g++ -g -I./include   -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include/ -c src/main.cpp -o src/main.dbg.o
+Compiling C++ (in dbg mode) src/unv_io.cpp...
+g++ -g -I./include   -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include/ -c src/unv_io.cpp -o src/unv_io.dbg.o
+src/unv_io.cpp: In function ‘void WriteMeshUNV(int, int, std::vector<double>, std::vector<int>, std::vector<int>, const char*)’:
+src/unv_io.cpp:15:37: error: variable ‘std::ofstream out_stream’ has initializer but incomplete type
+  std::ofstream out_stream (file_name);
+                                     ^
+src/unv_io.cpp:15:28: error: ‘file_name’ was not declared in this scope
+  std::ofstream out_stream (file_name);
+                            ^
+make: *** [src/unv_io.dbg.o] Error 1

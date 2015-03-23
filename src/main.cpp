@@ -218,7 +218,8 @@ int run1(int argc, char** argv) {
     return 0;
 }
 
-
+
+
 
 int BuildHexMeshFrom2DMesh(int argc, char** argv){
 
@@ -328,7 +329,7 @@ int BuildHexMeshFrom2DMesh(int argc, char** argv){
     }
     
     printf("Mesh Generation Info: \n");
-	printf("Number of nodes: %d\n" , n_total_nodes);
+    printf("Number of nodes: %d\n" , n_total_nodes);
     printf("Number of elements: %d\n", n_total_elements);
     printf("-----------------------------------------------------------\n");
 

@@ -25,12 +25,12 @@ endif
 
 #depedencies
 #GTS
-GTS_DIR     := /mssmat2/home/camataj/local
-GTS_INCLUDE := -I$(GTS_DIR)/include
-GTS_LIB     := -L$(GTS_DIR)/lib -lgts
+GTS_DIR     :=
+GTS_INCLUDE := 
+GTS_LIB     := -lgts
 
 #GLIB
-GLIB_INCLUDE := -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include
+GLIB_INCLUDE := -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include/
 GLIB_LIB     := -lglib-2.0 
 
 CPPFLAGS += $(GTS_INCLUDE) $(GLIB_INCLUDE)
