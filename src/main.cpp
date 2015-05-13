@@ -264,7 +264,7 @@ int BuildHexMeshFrom2DMesh(int argc, char** argv){
     int n_base_nodes    = gmsh.getNumberofNodes();
     
     // Number of cells at z-direction
-    int nz     =  14;
+    int nz     =  30;
     double dz;
     
     // Compute number od nodes and cells
@@ -276,8 +276,8 @@ int BuildHexMeshFrom2DMesh(int argc, char** argv){
     
 	// Some stats.
     double dzmin, dzmax;
-	dzmin  = 1.0E10;
-	dzmax  = -1.0E10;
+    dzmin  = 1.0E10;
+    dzmax  = -1.0E10;
 
 
     int c = 0;
@@ -291,7 +291,7 @@ int BuildHexMeshFrom2DMesh(int argc, char** argv){
             double zmax = box->z1+d;
             dz = (zmax-zmin)/(double)nz;
             dz<dzmin?dzmin=dz:dzmin=dzmin;
-			dz>dzmax?dzmax=dz:dzmax=dzmax;
+	    dz>dzmax?dzmax=dz:dzmax=dzmax;
             double z = k*dz;
             int id_node = (k*n_base_nodes + nb);
             coords[id_node*3+0] = x;
